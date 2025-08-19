@@ -1,3 +1,5 @@
+import HeroSection from "@/components/home/Herohome";
+import StatsSection from "@/components/home/Herostats";
 import { Geist, Geist_Mono } from "next/font/google";
 
 const geistSans = Geist({
@@ -12,7 +14,9 @@ const geistMono = Geist_Mono({
 
 export default function Home() {
   return (
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <main className="flex flex-col row-start-2 items-center sm:items-start">
+        <HeroSection/>
+        <StatsSection/>
       </main>
   );
 }
