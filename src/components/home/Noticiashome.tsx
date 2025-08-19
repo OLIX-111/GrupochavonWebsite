@@ -46,7 +46,7 @@ export default function NewsSection() {
           </div>
           <Link
             href="/noticias"
-            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300 self-start lg:self-auto"
+            className="bg-[#ee8e0a] text-white px-10 py-4 rounded-xl font-semibold transition-colors duration-300 self-start lg:self-auto"
           >
             Ver Todas las Noticias
           </Link>
@@ -56,12 +56,12 @@ export default function NewsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {newsArticles.map((article) => (
             <Link key={article.id} href={`/noticias/${article.slug}`} className="group cursor-pointer">
-              <div className="overflow-hidden hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+              <div className="overflow-hidden ">
                 <div className="aspect-video relative overflow-hidden">
                   <img
                     src={article.image || "/placeholder.svg"}
                     alt={article.title}
-                    className="w-full h-full object-cover rounded-xl"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-6">
