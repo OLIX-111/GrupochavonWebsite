@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 
 export default function Home() {
   return (
-      <main className="">
-        <HeroSection/>
-        <StatsSection/>
-        <ValuesSection/>
-      </main>
+    <main className="">
+      <HeroSection />
+      <StatsSection />
+      <ValuesSection />
+    </main>
   );
 }
