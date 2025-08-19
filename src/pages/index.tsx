@@ -1,5 +1,10 @@
+import CompaniesSection from "@/components/home/Empresashome";
+import TeamSection from "@/components/home/Equipo";
 import HeroSection from "@/components/home/Herohome";
 import StatsSection from "@/components/home/Herostats";
+import NewsSection from "@/components/home/Noticiashome";
+import HeritageSection from "@/components/home/Raices";
+import SectorsSection from "@/components/home/Sectores";
 import ValuesSection from "@/components/home/Valoreshome";
 import { Geist, Geist_Mono } from "next/font/google";
 
@@ -19,6 +24,11 @@ export default function Home() {
       <HeroSection />
       <StatsSection />
       <ValuesSection />
+      <CompaniesSection/>
+      <HeritageSection/>
+      <TeamSection/>
+      <SectorsSection/>
+      <NewsSection/>
     </main>
   );
 }
