@@ -11,7 +11,7 @@ export default function CompaniesSection() {
   ]
 
   return (
-    <section className="bg-white py-30">
+    <section id="empresas" className="bg-white py-30">
       <div className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
         {/* Header */}
         <div className="text-center mb-10">

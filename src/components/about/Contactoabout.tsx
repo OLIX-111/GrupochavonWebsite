@@ -1,4 +1,5 @@
 import type React from "react"
+import Link from "next/link"
 
 const ContactAbout: React.FC = () => {
   return (
@@ -19,9 +20,9 @@ const ContactAbout: React.FC = () => {
               En Grupo Chavón, creemos en las conexiones que impulsan grandes ideas y proyectos.
             </h2>
 
-            <button className="bg-transparent border-3 border-white text-white px-8 py-3 rounded-xl font-medium hover:bg-white hover:text-black transition-all duration-300 ease-in-out">
+            <Link href="/contacts" className="bg-transparent border-3 border-white text-white px-8 py-3 rounded-xl font-medium hover:bg-white hover:text-black transition-all duration-300 ease-in-out">
               Contáctanos
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Link from "next/link"
 
 export default function HeroSection() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false)
@@ -38,9 +39,9 @@ export default function HeroSection() {
             Construyendo el Futuro de Nuestros Destinos con Innovación y Compromiso
           </h1>
 
-          <button className="bg-[#ee8e0a] hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-xl text-lg duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform">
+          <Link href="#empresas" className="bg-[#ee8e0a] hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-xl text-lg duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform">
             Nuestras Empresas
-          </button>
+          </Link>
         </div>
       </div>
 

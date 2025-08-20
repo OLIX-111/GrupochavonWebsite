@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function TeamSection() {
   return (
     <section className="py-30 bg-white">
@@ -15,9 +17,9 @@ export default function TeamSection() {
               preservan el entorno y promueven la riqueza cultural.
             </p>
 
-            <button className="bg-[#ee8e0a] text-white px-10 py-4 rounded-xl font-medium ">
-              Conoce Más
-            </button>
+            <Link href="/about" className="bg-[#ee8e0a] text-white font-semibold px-10 py-4 rounded-xl transition-colors duration-200">
+                Conozca Más
+              </Link>
           </div>
 
           {/* Right side - Image */}

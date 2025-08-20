@@ -12,37 +12,37 @@ const sectors: Sector[] = [
     id: "construccion",
     name: "Construcción",
     image: "/home/sector1.avif",
-    href: "/sectores/construccion",
+    href: "/empresas",
   },
   {
     id: "ebanisteria",
     name: "Ebanistería",
     image: "/home/sector2.avif",
-    href: "/sectores/ebanisteria",
+    href: "//empresas",
   },
   {
     id: "bienes-raices",
     name: "Bienes Raíces",
     image: "/home/sector3.avif",
-    href: "/sectores/bienes-raices",
+    href: "/empresas",
   },
   {
     id: "publicidad",
     name: "Publicidad",
     image: "/home/sector4.avif",
-    href: "/sectores/publicidad",
+    href: "/empresas",
   },
   {
     id: "turismo",
     name: "Turismo",
     image: "/home/sector5.avif",
-    href: "/sectores/turismo",
+    href: "/empresas",
   },
   {
     id: "responsabilidad-social",
     name: "Responsabilidad Social",
     image: "/home/sector6.avif",
-    href: "/sectores/responsabilidad-social",
+    href: "/empresas",
   },
 ]
 

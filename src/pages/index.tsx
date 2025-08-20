@@ -6,6 +6,8 @@ import NewsSection from "@/components/home/Noticiashome";
 import HeritageSection from "@/components/home/Raices";
 import SectorsSection from "@/components/home/Sectores";
 import ValuesSection from "@/components/home/Valoreshome";
+import Footer from "@/components/ui/Footer";
+import Header from "@/components/ui/Header";
 import { Geist, Geist_Mono } from "next/font/google";
 
 const geistSans = Geist({
@@ -21,6 +23,7 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <main className="">
+      <Header transparent/>
       <HeroSection />
       <StatsSection />
       <ValuesSection />
@@ -29,6 +32,7 @@ export default function Home() {
       <TeamSection/>
       <SectorsSection/>
       <NewsSection/>
+      <Footer/>
     </main>
   );
 }

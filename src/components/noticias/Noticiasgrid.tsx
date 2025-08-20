@@ -34,11 +34,11 @@ export default function NoticiasGrid() {
   ]
 
   return (
-    <section className=" ">
+    <section className=" pb-30 ">
       <div className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {newsArticles.map((article) => (
-            <Link key={article.id} href={`/noticias/${article.slug}`} className="group cursor-pointer">
+            <Link key={article.id} href={`/detalle-noticias/${article.slug}`} className="group cursor-pointer">
               <div className="overflow-hidden ">
                 <div className="aspect-video relative overflow-hidden">
                   <img

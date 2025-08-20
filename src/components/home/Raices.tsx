@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function HeritageSection() {
   return (
     <section className="bg-white py-20">
@@ -18,9 +20,9 @@ export default function HeritageSection() {
                 turismo, contribuyendo al desarrollo local.
               </p>
 
-              <button className="bg-[#ee8e0a] text-white font-semibold px-10 py-4 rounded-xl transition-colors duration-200">
+              <Link href="/about" className="bg-[#ee8e0a] text-white font-semibold px-10 py-4 rounded-xl transition-colors duration-200">
                 Conozca Más
-              </button>
+              </Link>
             </div>
           </div>
 
