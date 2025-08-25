@@ -9,7 +9,7 @@ export default function HeroSection() {
   useEffect(() => {
     // Preload video for better performance
     const video = document.createElement("video")
-    video.src = "/hero-video.mp4"
+    video.src = "/home/hero-video.mp4"
     video.onloadeddata = () => setIsVideoLoaded(true)
   }, [])
 
@@ -22,15 +22,13 @@ export default function HeroSection() {
         muted
         loop
         playsInline
-        poster="/hero-poster.png"
+        poster="/home/hero-poster.png"
       >
-        <source src="/hero-video.mp4" type="video/mp4" />
-        {/* Fallback image if video doesn't load */}
-        <img src="/hero-poster.png" alt="Vista aérea de destinos turísticos" className="w-full h-full object-cover" />
+        <source src="/home/hero-video.mp4" type="video/mp4" />
       </video>
 
-      {/* Overlay with specified color #172946 */}
-      <div className="absolute inset-0 bg-opacity-70" style={{ backgroundColor: "#172946" }} />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#172946]/40 via-[#172946]/70 to-[#172946]" />
 
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center h-full px-4">
