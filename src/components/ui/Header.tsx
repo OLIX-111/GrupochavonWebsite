@@ -22,10 +22,10 @@ export default function Header({
   const [scrolled, setScrolled] = useState(false)
 
   const proyectos = [
-    { name: "Frailejon", href: "/frailejonvillage" },
+    { name: "Frailejon", href: "https://lromanarealestate.com/frailejonvillage" },
     { name: "Altos De Frailejon", href: "/altos-de-frailejon" },
-    { name: "Costa Mar", href: "/costamar" },
-    { name: "Stone Tower III", href: "/stone-tower-3" },
+    { name: "Costa Mar", href: "https://lromanarealestate.com/costamar" },
+    { name: "Stone Tower III", href: "https://lromanarealestate.com/stone-tower-3" },
   ]
   const servicios = [
     { name: "Construccion", href: "/empresas" },

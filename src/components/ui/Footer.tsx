@@ -44,9 +44,9 @@ export default function Footer() {
           <div>
             <h3 className="text-sm uppercase tracking-widest mb-6">Proyectos</h3>
             <ul className="space-y-3">
-              <li><Link href="/costamar" className="">Costa Mar</Link></li>
-              <li><Link href="/stone-tower-3" className="">Stone Tower 3</Link></li>
-              <li><Link href="/frailejonvillage" className="">Frailejon Village</Link></li>
+              <li><Link href="https://lromanarealestate.com/costamar" className="">Costa Mar</Link></li>
+              <li><Link href="https://lromanarealestate.com/stone-tower-3" className="">Stone Tower 3</Link></li>
+              <li><Link href="https://lromanarealestate.com/frailejonvillage" className="">Frailejon Village</Link></li>
             </ul>
           </div>
           </div>
