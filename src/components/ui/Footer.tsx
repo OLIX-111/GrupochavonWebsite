@@ -33,8 +33,8 @@ export default function Footer() {
             <h3 className="text-sm uppercase tracking-widest mb-6">Empresas</h3>
             <ul className="space-y-3">
               <li><Link href="/empresas" className="">Dyaccsa</Link></li>
-              <li><Link href="/empresas" className="">L&rsquo;ROMAna Real State</Link></li>
-              <li><Link href="/empresas" className="">Romana Ebanisteria</Link></li>
+              <li><Link href="https://lromanarealestate.com/" className="">L&rsquo;ROMAna Real State</Link></li>
+              <li><Link href="https://www.romanaebanisteria.com/" className="">Romana Ebanisteria</Link></li>
               <li><Link href="/empresas" className="">Fundacion Chavon</Link></li>
               <li><Link href="/empresas" className="">Waoo Experience</Link></li>
             </ul>

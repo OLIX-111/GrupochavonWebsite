@@ -1,13 +1,13 @@
 export default function CompaniesSection() {
   const companies = [
-    { name: "DYACCSA", logo: "/home/dyaccsalogo.avif", url: "https://dyaccsa.com" },
-    { name: "ROMANA EBANISTERIA", logo: "/home/romanaebanisteria-logo.avif", url: "https://romana-ebanisteria.com" },
-    { name: "ROMANA", logo: "/home/lromana-logo.avif", url: "https://romana.com.do" },
+    { name: "DYACCSA", logo: "/home/dyaccsalogo.avif", url: "/empresas" },
+    { name: "ROMANA EBANISTERIA", logo: "/home/romanaebanisteria-logo.avif", url: "https://www.romanaebanisteria.com/" },
+    { name: "ROMANA", logo: "/home/lromana-logo.avif", url: "https://lromanarealestate.com/" },
     { name: "HORMIGÓN", logo: "/home/hormigon-logo.avif", url: "https://hormigon.com.do" },
     { name: "RD CAPITAL", logo: "/home/rdcapital-logo.avif", url: "https://rdcapital.com.do" },
-    { name: "Novach", logo: "/home/novach-logo.avif", url: "https://novach.com" },
-    { name: "Waoo HOTEL", logo: "/home/waoo-logo.avif", url: "https://wavehotel.com.do" },
-    { name: "CHAVON", logo: "/home/fundacion-logo.avif", url: "https://chavon.com.do" },
+    { name: "Novach", logo: "/home/novach-logo.avif", url: "/empresas" },
+    { name: "Waoo HOTEL", logo: "/home/waoo-logo.avif", url: "/empresas" },
+    { name: "CHAVON", logo: "/home/fundacion-logo.avif", url: "/empresas" },
   ]
 
   return (
