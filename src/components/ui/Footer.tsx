@@ -56,8 +56,8 @@ export default function Footer() {
         <div className="mt-12 border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-400">© 2025 Grupo Chavón. Todos los derechos reservados.</p>
           <div className="flex space-x-4">
-            <Link href="/politica-de-privacidad" className="text-sm text-gray-400 ">Política de Privacidad</Link>
-            <Link href="/terminos-y-condiciones" className="text-sm text-gray-400 ">Términos y Condiciones</Link>
+            {/* <Link href="/politica-de-privacidad" className="text-sm text-gray-400 ">Política de Privacidad</Link>
+            <Link href="/terminos-y-condiciones" className="text-sm text-gray-400 ">Términos y Condiciones</Link> */}
           </div>
         </div>
       </div>

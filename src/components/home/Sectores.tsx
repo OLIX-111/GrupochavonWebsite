@@ -8,23 +8,29 @@ interface Sector {
 }
 
 const sectors: Sector[] = [
+  /* { name: "Construccion", href: "/empresas/dyaccsa" },
+    { name: "Ebanisteria", href: "/empresas/ebanisteria-la-romana" },
+    { name: "Bienes Raices", href: "/empresas/l-romana-real-estate" },
+    
+    { name: "Turismo", href: "/empresas/wao-experience" },
+    { name: "Responsabilidad social", href: "/empresas/responsabilidad-social" }, */
   {
     id: "construccion",
     name: "Construcción",
     image: "/home/sector1.avif",
-    href: "/empresas",
+    href: "/empresas/dyaccsa",
   },
   {
     id: "ebanisteria",
     name: "Ebanistería",
     image: "/home/sector2.avif",
-    href: "//empresas",
+    href: "/empresas/ebanisteria-la-romana",
   },
   {
     id: "bienes-raices",
     name: "Bienes Raíces",
     image: "/home/sector3.avif",
-    href: "/empresas",
+    href: "/empresas/l-romana-real-estate",
   },
   {
     id: "publicidad",
@@ -36,13 +42,13 @@ const sectors: Sector[] = [
     id: "turismo",
     name: "Turismo",
     image: "/home/sector5.avif",
-    href: "/empresas",
+    href: "/empresas/wao-experience",
   },
   {
     id: "responsabilidad-social",
     name: "Responsabilidad Social",
     image: "/home/sector6.avif",
-    href: "/empresas",
+    href: "/empresas/responsabilidad-social",
   },
 ]
 

@@ -1,61 +1,131 @@
+"use client"
+
 import Link from "next/link"
+import { useEffect, useState } from "react"
+import { client } from "@/sanity/lib/client"
+import { urlFor } from "@/sanity/lib/image"
+import { motion, AnimatePresence } from "framer-motion"
 
 interface NewsArticle {
-  id: string
-  title: string
-  date: string
-  image: string
-  slug: string
+  _id: string
+  titulo: string
+  slug: { current: string }
+  imagenPrincipal?: { asset?: { _ref: string }; alt?: string }
+  _createdAt: string
 }
 
+interface SanityNews {
+  _id: string
+  titulo: string
+  slug: { current: string }
+  imagenPrincipal?: { asset?: { _ref: string }; alt?: string }
+  _createdAt: string
+}
+
+const query = `*[_type == "noticia" && publicado == true] | order(coalesce(orden, 9999) asc, _createdAt desc) {
+  _id, titulo, slug, imagenPrincipal{alt, asset}, _createdAt
+}`
+
 export default function NoticiasGrid() {
-  const newsArticles: NewsArticle[] = [
-    {
-      id: "1",
-      title: "Grupo Chavón participa en feria internacional coofertas 2024 | Bogotá Colombia",
-      date: "13 ene 2025",
-      image: "/home/noticia1.avif",
-      slug: "grupo-chavon-feria-bogota-2024",
-    },
-    {
-      id: "2",
-      title: "Grupo Chavón Participa en la Feria Inmobiliaria de Banreservas en Nueva York y Lawrence",
-      date: "22 mar 2024",
-      image: "/home/noticia2.avif",
-      slug: "grupo-chavon-feria-banreservas-nueva-york",
-    },
-    {
-      id: "3",
-      title: "GRUPO CHAVÓN DESTACA EN LA FERIA INMOBILIARIA LA ESTANCIA 2024 Y GRAN COPA INVITACIONAL...",
-      date: "5 sept 2024",
-      image: "/home/noticia3.avif",
-      slug: "grupo-chavon-feria-estancia-2024",
-    },
-  ]
+  const [data, setData] = useState<NewsArticle[] | null>(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    let active = true
+    async function load() {
+      try {
+        const res: SanityNews[] = await client.fetch(query)
+        if (!active) return
+        setData(res)
+      } catch (e: any) {
+        if (!active) return
+        setError(e?.message || 'No se pudieron cargar las noticias')
+      } finally {
+        if (active) setLoading(false)
+      }
+    }
+    load()
+    return () => {
+      active = false
+    }
+  }, [])
+
+  const formatDate = (iso: string) => {
+    try {
+      return new Intl.DateTimeFormat('es-ES', { day: 'numeric', month: 'short', year: 'numeric' }).format(new Date(iso))
+    } catch {
+      return iso.split('T')[0]
+    }
+  }
 
   return (
-    <section className=" pb-30 ">
+    <section className="pb-30">
       <div className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {newsArticles.map((article) => (
-            <Link key={article.id} href={`/detalle-noticias/${article.slug}`} className="group cursor-pointer">
-              <div className="overflow-hidden ">
-                <div className="aspect-video relative overflow-hidden">
-                  <img
-                    src={article.image || "/placeholder.svg"}
-                    alt={article.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="font-semibold text-lg mb-4 line-clamp-3">
-                    {article.title}
-                  </h3>
-                  <p className="text-gray-500 text-sm">{article.date}</p>
-                </div>
-              </div>
-            </Link>
-          ))}
+        {error && (
+          <div className="mb-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+            {error}
+          </div>
+        )}
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {/* Loading skeletons */}
+          <AnimatePresence>
+            {loading &&
+              Array.from({ length: 3 }).map((_, i) => (
+                <motion.div
+                  key={`skeleton-${i}`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm"
+                >
+                  <div className="aspect-video animate-pulse bg-slate-200/70" />
+                  <div className="space-y-3 p-6">
+                    <div className="h-4 w-3/4 animate-pulse rounded bg-slate-200" />
+                    <div className="h-4 w-1/2 animate-pulse rounded bg-slate-200" />
+                  </div>
+                </motion.div>
+              ))}
+          </AnimatePresence>
+
+          {!loading && data && data.length === 0 && (
+            <div className="col-span-full rounded-xl border border-slate-200 bg-white p-10 text-center text-slate-600">
+              Aún no hay noticias publicadas.
+            </div>
+          )}
+
+            {!loading && data && data.map((article) => {
+              const imageUrl = article.imagenPrincipal?.asset?._ref
+                ? urlFor(article.imagenPrincipal).width(800).height(450).quality(80).fit('crop').url()
+                : '/placeholder.svg'
+              return (
+                <Link
+                  key={article._id}
+                  href={`/noticias/${article.slug.current}`}
+                  className="group cursor-pointer overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                >
+                  <div className="relative aspect-video overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={imageUrl}
+                      alt={article.imagenPrincipal?.alt || article.titulo}
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent opacity-60 transition group-hover:opacity-70" />
+                    <span className="absolute bottom-2 left-2 rounded-md bg-black/60 px-2 py-1 text-[11px] font-medium uppercase tracking-wide text-white backdrop-blur-sm">
+                      {formatDate(article._createdAt)}
+                    </span>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="mb-3 line-clamp-3 text-lg font-semibold tracking-tight text-slate-800 group-hover:text-[#ee8e0a] transition-colors">
+                      {article.titulo}
+                    </h3>
+                    <p className="text-xs font-medium uppercase tracking-wide text-slate-400">Leer más →</p>
+                  </div>
+                </Link>
+              )
+            })}
         </div>
       </div>
     </section>

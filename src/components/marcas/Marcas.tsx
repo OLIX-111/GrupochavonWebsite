@@ -11,7 +11,7 @@ export default function Marcas() {
   ]
 
   return (
-    <section className="bg-white py-30">
+    <section className="bg-white py-30 mt-16">
       <div className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
         {/* Header */}
         <div className="w-full justify-start items-start mb-10">
@@ -26,19 +26,15 @@ export default function Marcas() {
         <div className="grid grid-cols-2 border border-gray-200 rounded-md md:grid-cols-4 gap-8 md:gap-6 items-center py-5">
           {companies.map((company, index) => (
             <div key={index} className="flex items-center justify-center">
-              <a
-                href={company.url}
-                target="_blank"
-                rel="noopener noreferrer"
+              <div
                 className="text-center block"
-                aria-label={`Visitar sitio web de ${company.name}`}
               >
                 <img
                   src={company.logo || "/placeholder.svg"}
                   alt={`${company.name} logo`}
-                  className="h-12 md:h-44 w-auto mx-auto object-contain transition-all duration-300 cursor-pointer"
+                  className="h-12 md:h-44 w-auto mx-auto object-contain transition-all duration-300"
                 />
-              </a>
+              </div>
             </div>
           ))}
         </div>

@@ -1,3 +1,4 @@
+import { Locate, Mail, Phone } from "lucide-react";
 import React, { useState } from "react";
 
 function IconWrap({ children }: { children: React.ReactNode }) {
@@ -74,7 +75,7 @@ export default function ContactSection() {
                         <ul className="mt-10 space-y-6">
                             <li className="flex items-start gap-4">
                                 <IconWrap>
-                                    <img src="/icons/phone.svg" alt="Teléfono" className="h-5 w-5" loading="lazy" />
+                                    <Phone/>
                                 </IconWrap>
                                 <div className="pt-1 text-[15px] text-slate-700">
                                     <a href="tel:8292222481" className="font-medium hover:underline">
@@ -84,7 +85,7 @@ export default function ContactSection() {
                             </li>
                             <li className="flex items-start gap-4">
                                 <IconWrap>
-                                    <img src="/icons/carta.svg" alt="Correo" className="h-5 w-5" loading="lazy" />
+                                    <Mail/>
                                 </IconWrap>
                                 <div className="pt-1 text-[15px] text-slate-700">
                                     <a
@@ -97,7 +98,7 @@ export default function ContactSection() {
                             </li>
                             <li className="flex items-start gap-4">
                                 <IconWrap>
-                                    <img src="/icons/pin.svg" alt="Ubicación" className="h-5 w-5" loading="lazy" />
+                                    <Locate/>
                                 </IconWrap>
                                 <div className="pt-1 text-[15px] text-slate-700">
                                     <span className="font-medium">

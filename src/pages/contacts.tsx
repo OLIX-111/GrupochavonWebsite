@@ -4,7 +4,7 @@ import Header from "@/components/ui/Header";
 
 export default function ContactsPage() {
     return (
-        <main>
+        <main className="pt-16">
             <Header/>
             <ContactSection />
             <Footer/>

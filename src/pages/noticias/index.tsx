@@ -4,7 +4,7 @@ import Footer from '@/components/ui/Footer'
 import Header from '@/components/ui/Header'
 import React from 'react'
 
-const noticias = () => {
+const Noticias = () => {
   return (
     <div>
         <Header/>
@@ -15,4 +15,4 @@ const noticias = () => {
   )
 }
 
-export default noticias
+export default Noticias
