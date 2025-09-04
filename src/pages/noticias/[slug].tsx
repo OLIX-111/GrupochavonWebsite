@@ -199,7 +199,7 @@ export default function NoticiaPage({ noticia }: NoticiaPageProps) {
 								← Volver
 							</Link>
 							<Link
-								href="/contacts"
+								href="/contact"
 								className="inline-flex items-center rounded-xl bg-[#ee8e0a] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#d77a00]"
 							>
 								Contáctanos

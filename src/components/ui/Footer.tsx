@@ -16,6 +16,12 @@ export default function Footer() {
               height={50}
               className="mb-6 h-30 w-auto"
             />
+            <div>
+              <ul className="space-y-3 text-gray-600">
+                <li><Link href="/politica-de-privacidad" className="">Política de Privacidad</Link></li>
+                <li><Link href="/terminos-y-condiciones" className="">Términos y Condiciones</Link></li>
+              </ul>
+            </div>
           </div>
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
             {/* Navegación */}
@@ -32,11 +38,11 @@ export default function Footer() {
           <div>
             <h3 className="text-sm uppercase tracking-widest mb-6">Empresas</h3>
             <ul className="space-y-3">
-              <li><Link href="/empresas" className="">Dyaccsa</Link></li>
-              <li><Link href="https://lromanarealestate.com/" className="">L&rsquo;ROMAna Real State</Link></li>
-              <li><Link href="https://www.romanaebanisteria.com/" className="">Romana Ebanisteria</Link></li>
-              <li><Link href="/empresas" className="">Fundacion Chavon</Link></li>
-              <li><Link href="/empresas" className="">Waoo Experience</Link></li>
+              <li><Link href="/empresas/dyaccsa" target="_blank" className="">Dyaccsa</Link></li>
+              <li><Link href="https://lromanarealestate.com/" target="_blank" className="">L&rsquo;ROMAna Real State</Link></li>
+              <li><Link href="https://www.romanaebanisteria.com/" target="_blank" className="">Romana Ebanisteria</Link></li>
+              <li><Link href="/empresas/responsabilidad-social" className="">Fundacion Chavon</Link></li>
+              <li><Link href="https://www.waooexperience.com/" target="_blank" className="">Waoo Experience</Link></li>
             </ul>
           </div>
 

@@ -11,7 +11,7 @@ const ContactServicio: React.FC = () => {
               Construyamos Juntos el Futuro que Imaginaste con la Excelencia de Grupo Chavón
             </h2>
 
-            <Link href="/contacts" className="bg-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-black transition-all duration-300 ease-in-out">
+            <Link href="/contact" className="bg-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-black transition-all duration-300 ease-in-out">
               Contáctanos
             </Link>
           </div>

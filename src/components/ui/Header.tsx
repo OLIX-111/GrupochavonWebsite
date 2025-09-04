@@ -199,7 +199,7 @@ export default function Header({
           {/* CTA + mobile toggle */}
           <div className="flex items-center gap-3">
             <Link
-              href="/contacts"
+              href="/contact"
               className="hidden lg:inline-block rounded-xl bg-[#ee8e0a] px-4 py-3 xl:px-6 xl:py-4 text-sm font-medium text-white hover:bg-[#d77a00] transition-colors duration-300"
             >
               Contactanos
@@ -370,7 +370,7 @@ export default function Header({
                 {/* CTA Section */}
                 <div className="p-4 bg-gray-50 border-t border-gray-200">
                   <Link
-                    href="/contacts"
+                    href="/contact"
                     onClick={closeMobileMenu}
                     className="block w-full text-center rounded-xl bg-[#ee8e0a] px-6 py-4 text-lg font-medium text-white hover:bg-[#d77a00] transition-colors"
                   >

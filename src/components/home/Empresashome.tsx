@@ -1,13 +1,13 @@
 export default function CompaniesSection() {
   const companies = [
-    { name: "DYACCSA", logo: "/home/dyaccsalogo.avif", url: "/empresas" },
+    { name: "DYACCSA", logo: "/home/dyaccsalogo.avif", url: "/empresas/dyaccsa" },
     { name: "ROMANA EBANISTERIA", logo: "/home/romanaebanisteria-logo.avif", url: "https://www.romanaebanisteria.com/" },
     { name: "ROMANA", logo: "/home/lromana-logo.avif", url: "https://lromanarealestate.com/" },
-    { name: "HORMIGÓN", logo: "/home/hormigon-logo.avif", url: "https://hormigon.com.do" },
-    { name: "RD CAPITAL", logo: "/home/rdcapital-logo.avif", url: "https://rdcapital.com.do" },
-    { name: "Novach", logo: "/home/novach-logo.avif", url: "/empresas" },
-    { name: "Waoo HOTEL", logo: "/home/waoo-logo.avif", url: "/empresas" },
-    { name: "CHAVON", logo: "/home/fundacion-logo.avif", url: "/empresas" },
+    { name: "HORMIGÓN", logo: "/home/hormigon-logo.avif", url: "" },
+    { name: "RD CAPITAL", logo: "/home/rdcapital-logo.avif", url: "" },
+    { name: "Novach", logo: "/home/novach-logo.avif", url: "" },
+    { name: "Waoo HOTEL", logo: "/home/waoo-logo.avif", url: "https://www.waooexperience.com/" },
+    { name: "CHAVON", logo: "/home/fundacion-logo.avif", url: "/empresas/responsabilidad-social" },
   ]
 
   return (
