@@ -58,7 +58,7 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ targetNumber, suffix, d
   }, [targetNumber, duration, isVisible, hasAnimated])
 
   return (
-    <span className="text-4xl md:text-5xl lg:text-6xl font-medium text-[#ee8e0a]">
+    <span className="text-4xl md:text-5xl lg:text-6xl font-medium text-[#ff751f]">
       {currentNumber.toLocaleString()}
       {suffix}
     </span>

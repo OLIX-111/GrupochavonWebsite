@@ -22,9 +22,9 @@ export default function HeroAbout() {
         <div className="flex justify-center">
           <div className="w-full max-w-7xl">
             <img
-              src="/about/hero-about.avif"
-              alt="Equipo de Grupo Chavón en stand de exhibición mostrando 40 años de trayectoria"
-              className="w-full h-[590px] rounded-sm object-cover"
+              src="/about/equipo-azul.webp"
+              alt="Equipo de Grupo Chavón vestidos de azul en imagen grupal"
+              className="w-full rounded-sm object-contain"
             />
           </div>
         </div>

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 function IconWrap({ children }: { children: React.ReactNode }) {
     return (
-        <span className="inline-flex size-10 items-center justify-center rounded-[12px] bg-[#ee8e0b59] text-black border border-[#ee8e0b59]">
+        <span className="inline-flex size-10 items-center justify-center rounded-[12px] bg-[#ff751f59] text-black border border-[#ff751f59]">
             {children}
         </span>
     );
@@ -78,8 +78,8 @@ export default function ContactSection() {
                                     <Phone/>
                                 </IconWrap>
                                 <div className="pt-1 text-[15px] text-slate-700">
-                                    <a href="tel:8292222481" className="font-medium hover:underline">
-                                        829-222-2481
+                                    <a href="tel:+14844731113" className="font-medium hover:underline">
+                                        +1 (484) 473-1113
                                     </a>
                                 </div>
                             </li>

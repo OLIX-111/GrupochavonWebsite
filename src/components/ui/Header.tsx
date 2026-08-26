@@ -15,7 +15,7 @@ type HeaderProps = {
 
 export default function Header({
   transparent = false,
-  logoSrc = "/grupo_chavon_logo.png",
+  logoSrc = "/Logo de grupochavon modificado.png",
   logoTransparentSrc = "/grupo_chavon_alt_logo.avif",
 }: HeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -23,18 +23,18 @@ export default function Header({
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
 
   const proyectos = [
-    { name: "Frailejon", href: "https://lromanarealestate.com/frailejonvillage" },
-    { name: "Altos De Frailejon", href: "/altos-de-frailejon" },
-    { name: "Costa Mar", href: "https://lromanarealestate.com/costamar" },
+    { name: "Frailejón Village", href: "https://lromanarealestate.com/frailejonvillage" },
+    { name: "Altos De Frailejón", href: "/altos-de-frailejon" },
     { name: "Stone Tower III", href: "https://lromanarealestate.com/stone-tower-3" },
+    { name: "Costa Mar", href: "https://lromanarealestate.com/costamar" },
   ]
   const servicios = [
-    { name: "Construccion", href: "/empresas/dyaccsa" },
-    { name: "Ebanisteria", href: "/empresas/ebanisteria-la-romana" },
-    { name: "Bienes Raices", href: "/empresas/l-romana-real-estate" },
+    { name: "Construccion", href: "https://odoo.grupochavon.com/", external: true },
+    { name: "Ebanisteria", href: "https://www.romanaebanisteria.com/", external: true },
+    { name: "Bienes Raices", href: "https://www.rdcapitalrescue.com/", external: true },
     /* { name: "Publicidad", href: "/empresas" }, */
-    { name: "Turismo", href: "/empresas/wao-experience" },
-    { name: "Responsabilidad social", href: "/empresas/responsabilidad-social" },
+    { name: "Turismo", href: "https://www.waooexperience.com/", external: true },
+    { name: "Responsabilidad social", href: "https://www.grupochavon.com/empresas/responsabilidad-social", external: true },
   ]
 
   useEffect(() => {
@@ -142,6 +142,8 @@ export default function Header({
                           <Link
                             key={item.name}
                             href={item.href}
+                            target={item.external ? "_blank" : undefined}
+                            rel={item.external ? "noopener noreferrer" : undefined}
                             className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
                           >
                             {item.name}
@@ -191,7 +193,7 @@ export default function Header({
             <Link href="/marcas" className={`${linkColor} transition-colors duration-300`}>
               Marcas
             </Link>
-            <Link href="/noticias" className={`${linkColor} transition-colors duration-300`}>
+            <Link href="https://grupo-chavon2.odoo.com/noticias-grupo-chavon" target="_blank" rel="noopener noreferrer" className={`${linkColor} transition-colors duration-300`}>
               Noticias
             </Link>
           </nav>
@@ -200,7 +202,7 @@ export default function Header({
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className="hidden lg:inline-block rounded-xl bg-[#ee8e0a] px-4 py-3 xl:px-6 xl:py-4 text-sm font-medium text-white hover:bg-[#d77a00] transition-colors duration-300"
+              className="hidden lg:inline-block rounded-xl bg-[#ff751f] px-4 py-3 xl:px-6 xl:py-4 text-sm font-medium text-white hover:bg-[#e5631a] transition-colors duration-300"
             >
               Contactanos
             </Link>
@@ -269,7 +271,7 @@ export default function Header({
                   <div className="space-y-4">
                     <Link
                       href="/about"
-                      className="block text-xl font-medium text-gray-900 py-3 border-b border-gray-100 hover:text-[#ee8e0a] transition-colors"
+                      className="block text-xl font-medium text-gray-900 py-3 border-b border-gray-100 hover:text-[#ff751f] transition-colors"
                       onClick={closeMobileMenu}
                     >
                       Nosotros
@@ -278,7 +280,7 @@ export default function Header({
                     {/* Servicios Dropdown */}
                     <div className="border-b border-gray-100">
                       <button
-                        className="flex items-center justify-between w-full text-xl font-medium text-gray-900 py-3 hover:text-[#ee8e0a] transition-colors"
+                        className="flex items-center justify-between w-full text-xl font-medium text-gray-900 py-3 hover:text-[#ff751f] transition-colors"
                         onClick={() => setActiveSubmenu(activeSubmenu === "servicios" ? null : "servicios")}
                       >
                         <span>Servicios</span>
@@ -300,7 +302,9 @@ export default function Header({
                                 <Link
                                   key={item.name}
                                   href={item.href}
-                                  className="block text-lg text-gray-600 py-2 hover:text-[#ee8e0a] transition-colors"
+                                  target={item.external ? "_blank" : undefined}
+                                  rel={item.external ? "noopener noreferrer" : undefined}
+                                  className="block text-lg text-gray-600 py-2 hover:text-[#ff751f] transition-colors"
                                   onClick={closeMobileMenu}
                                 >
                                   {item.name}
@@ -315,7 +319,7 @@ export default function Header({
                     {/* Proyectos Dropdown */}
                     <div className="border-b border-gray-100">
                       <button
-                        className="flex items-center justify-between w-full text-xl font-medium text-gray-900 py-3 hover:text-[#ee8e0a] transition-colors"
+                        className="flex items-center justify-between w-full text-xl font-medium text-gray-900 py-3 hover:text-[#ff751f] transition-colors"
                         onClick={() => setActiveSubmenu(activeSubmenu === "proyectos" ? null : "proyectos")}
                       >
                         <span>Proyectos</span>
@@ -337,7 +341,7 @@ export default function Header({
                                 <Link
                                   key={item.name}
                                   href={item.href}
-                                  className="block text-lg text-gray-600 py-2 hover:text-[#ee8e0a] transition-colors"
+                                  className="block text-lg text-gray-600 py-2 hover:text-[#ff751f] transition-colors"
                                   onClick={closeMobileMenu}
                                 >
                                   {item.name}
@@ -351,15 +355,17 @@ export default function Header({
 
                     <Link
                       href="/marcas"
-                      className="block text-xl font-medium text-gray-900 py-3 border-b border-gray-100 hover:text-[#ee8e0a] transition-colors"
+                      className="block text-xl font-medium text-gray-900 py-3 border-b border-gray-100 hover:text-[#ff751f] transition-colors"
                       onClick={closeMobileMenu}
                     >
                       Marcas
                     </Link>
 
                     <Link
-                      href="/noticias"
-                      className="block text-xl font-medium text-gray-900 py-3 border-b border-gray-100 hover:text-[#ee8e0a] transition-colors"
+                      href="https://grupo-chavon2.odoo.com/noticias-grupo-chavon"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-xl font-medium text-gray-900 py-3 border-b border-gray-100 hover:text-[#ff751f] transition-colors"
                       onClick={closeMobileMenu}
                     >
                       Noticias
@@ -372,7 +378,7 @@ export default function Header({
                   <Link
                     href="/contact"
                     onClick={closeMobileMenu}
-                    className="block w-full text-center rounded-xl bg-[#ee8e0a] px-6 py-4 text-lg font-medium text-white hover:bg-[#d77a00] transition-colors"
+                    className="block w-full text-center rounded-xl bg-[#ff751f] px-6 py-4 text-lg font-medium text-white hover:bg-[#e5631a] transition-colors"
                   >
                     Contactanos
                   </Link>

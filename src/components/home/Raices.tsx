@@ -24,7 +24,7 @@ export default function HeritageSection() {
             grupo empresarial diversificado con impacto en construcción, publicidad, bienes raíces, ebanistería y
             turismo, contribuyendo al desarrollo local.
           </p>
-          <Link href="/about" className="inline-block bg-[#ee8e0a] text-white font-semibold px-8 py-3 rounded-xl transition-colors duration-200 hover:bg-[#d67e09]">
+          <Link href="/about" className="inline-block bg-[#ff751f] text-white font-semibold px-8 py-3 rounded-xl transition-colors duration-200 hover:bg-[#e5631a]">
             Conozca Más
           </Link>
         </div>
@@ -46,7 +46,7 @@ export default function HeritageSection() {
               grupo empresarial diversificado con impacto en construcción, publicidad, bienes raíces, ebanistería y
               turismo, contribuyendo al desarrollo local.
             </p>
-            <Link href="/about" className="inline-block bg-[#ee8e0a] text-white font-semibold px-8 lg:px-10 py-3 lg:py-4 rounded-xl transition-colors duration-200 hover:bg-[#d67e09]">
+            <Link href="/about" className="inline-block bg-[#ff751f] text-white font-semibold px-8 lg:px-10 py-3 lg:py-4 rounded-xl transition-colors duration-200 hover:bg-[#e5631a]">
               Conozca Más
             </Link>
           </div>
@@ -57,7 +57,7 @@ export default function HeritageSection() {
           <img
             src="/home/raicesimg.webp"
             alt="Equipo de Grupo Chavón en evento inmobiliario"
-            className="w-full h-full object-contain"
+            className="w-full h-full object-cover"
           />
         </div>
 

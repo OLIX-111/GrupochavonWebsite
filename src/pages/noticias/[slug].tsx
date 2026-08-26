@@ -42,7 +42,7 @@ const components: PortableTextComponents = {
 		h3: ({ children }) => <h3 className="mt-8 mb-3 text-xl font-semibold tracking-tight text-slate-900">{children}</h3>,
 		normal: ({ children }) => <p className="mb-5 leading-relaxed text-slate-700">{children}</p>,
 		blockquote: ({ children }) => (
-			<blockquote className="my-6 border-l-4 border-[#ee8e0a] bg-[#ee8e0a]/5 px-5 py-4 italic text-slate-700 rounded-r-md">
+			<blockquote className="my-6 border-l-4 border-[#ff751f] bg-[#ff751f]/5 px-5 py-4 italic text-slate-700 rounded-r-md">
 				{children}
 			</blockquote>
 		),
@@ -60,7 +60,7 @@ const components: PortableTextComponents = {
 					href={value.href}
 					target={value.blank ? '_blank' : undefined}
 					rel={rel}
-					className="font-medium text-[#ee8e0a] underline-offset-2 hover:underline"
+					className="font-medium text-[#ff751f] underline-offset-2 hover:underline"
 				>
 					{children}
 				</a>
@@ -91,7 +91,7 @@ const components: PortableTextComponents = {
 		number: ({ children }) => <ol className="mb-6 list-decimal pl-6 text-slate-700 space-y-1">{children}</ol>,
 	},
 	listItem: {
-		bullet: ({ children }) => <li className="marker:text-[#ee8e0a]">{children}</li>,
+		bullet: ({ children }) => <li className="marker:text-[#ff751f]">{children}</li>,
 	},
 }
 
@@ -103,7 +103,7 @@ export default function NoticiaPage({ noticia }: NoticiaPageProps) {
 				<p className="mt-4 text-slate-600">La página solicitada no existe o ha sido despublicada.</p>
 				<Link
 					href="/noticias"
-					className="mt-8 inline-flex rounded-xl bg-[#ee8e0a] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#d77a00]"
+					className="mt-8 inline-flex rounded-xl bg-[#ff751f] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#e5631a]"
 				>
 					Volver al listado
 				</Link>
@@ -200,7 +200,7 @@ export default function NoticiaPage({ noticia }: NoticiaPageProps) {
 							</Link>
 							<Link
 								href="/contact"
-								className="inline-flex items-center rounded-xl bg-[#ee8e0a] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#d77a00]"
+								className="inline-flex items-center rounded-xl bg-[#ff751f] px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-[#e5631a]"
 							>
 								Contáctanos
 							</Link>

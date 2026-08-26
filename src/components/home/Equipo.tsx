@@ -16,7 +16,7 @@ export default function TeamSection() {
             preservan el entorno y promueven la riqueza cultural.
           </p>
           <div>
-            <Link href="/about" className="bg-[#ee8e0a] text-white font-semibold px-10 py-4 rounded-xl transition-colors duration-200 inline-block hover:bg-[#d67e09]">
+            <Link href="/about" className="bg-[#ff751f] text-white font-semibold px-10 py-4 rounded-xl transition-colors duration-200 inline-block hover:bg-[#e5631a]">
               Conozca Más
             </Link>
           </div>

@@ -42,8 +42,8 @@ const ValuesSection: React.FC = () => {
 
   return (
     <section className="py-30 bg-[#f9faff]">
+      {/* Header */}
       <div className="container mx-auto px-6 sm:px-10 md:px-16 lg:px-24">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Impulsando el Desarrollo de Nuestros Destinos
@@ -56,27 +56,27 @@ const ValuesSection: React.FC = () => {
             empresas, para construir un futuro sostenible.
           </p>
         </div>
+      </div>
 
-        {/* Cards Grid */}
-        <div className="grid md:grid-cols-3 gap-7">
-          {values.map((value, index) => (
-            <div
-              key={index}
-              className="bg-white justify-start py-11 px-9 shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              {/* Icon */}
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
-                <div className="text-orange-500">{value.icon}</div>
-              </div>
-
-              {/* Content */}
-              <div className="">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-gray-600 w-70 leading-relaxed">{value.description}</p>
-              </div>
+      {/* Cards Grid — full viewport width */}
+      <div className="grid md:grid-cols-3 gap-6 w-full">
+        {values.map((value, index) => (
+          <div
+            key={index}
+            className="bg-white justify-start py-11 px-9 shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            {/* Icon */}
+            <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+              <div className="text-orange-500">{value.icon}</div>
             </div>
-          ))}
-        </div>
+
+            {/* Content */}
+            <div className="">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
+              <p className="text-gray-600 w-70 leading-relaxed">{value.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   )

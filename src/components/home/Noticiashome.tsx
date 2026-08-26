@@ -13,6 +13,7 @@ interface NewsArticle {
   isExternal?: boolean
   externalUrl?: string
   externalImage?: string
+  brighten?: boolean
 }
 
 interface Props {
@@ -47,6 +48,7 @@ const FALLBACK_NEWS: NewsArticle[] = [
     externalImage: 'https://grupo-chavon2.odoo.com/web/image/20304-918da54e/Publicaci%C3%B3n%20de%20blog%20%27Exitosa%20jornada%20de%20Open%20House%20en%20el%20proyecto%20Costa%20Mar%27%20cover%20image.webp',
     _createdAt: '2026-02-11T00:00:00.000Z',
     isExternal: true,
+    brighten: true,
   },
   {
     _id: 'odoo-7',
@@ -56,6 +58,7 @@ const FALLBACK_NEWS: NewsArticle[] = [
     externalImage: 'https://grupo-chavon2.odoo.com/web/image/20643-bed03e52/Publicaci%C3%B3n%20de%20blog%20%27Grupo%20Chav%C3%B3n%20fortalece%20su%20visi%C3%B3n%20en%20el%20Mercado%20Construction%20%26%20Real%20Estate%20Summit%202025%27%20cover%20image.webp',
     _createdAt: '2026-02-11T00:00:00.000Z',
     isExternal: true,
+    brighten: true,
   },
   {
     _id: 'odoo-3',
@@ -118,12 +121,14 @@ export default function NewsSection({ initial, limit = 6 }: Props) {
               Conoce nuestros logros más recientes y las iniciativas que están transformando La Romana.
             </p>
           </div>
-          <Link
-            href="/noticias"
-            className="shrink-0 bg-[#ee8e0a] text-white px-8 py-4 rounded-xl font-semibold transition-colors duration-300 hover:bg-[#d67e09]"
+          <a
+            href="https://grupo-chavon2.odoo.com/noticias-grupo-chavon"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 bg-[#ff751f] text-white px-8 py-4 rounded-xl font-semibold transition-colors duration-300 hover:bg-[#e5631a]"
           >
             Ver Todas las Noticias
-          </Link>
+          </a>
         </div>
       </div>
 
@@ -167,12 +172,15 @@ export default function NewsSection({ initial, limit = 6 }: Props) {
                     alt={article.titulo}
                     fill
                     sizes="(max-width:640px) 50vw, (max-width:1024px) 33vw, 16vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className={`object-cover transition-transform duration-500 group-hover:scale-105${article.brighten ? ' brightness-110' : ''}`}
+                    style={article.brighten ? { filter: 'brightness(1.6) saturate(1.1)' } : undefined}
                   />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
+                  {!article.brighten && (
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
+                  )}
                 </div>
                 <div className="p-4">
-                  <p className="text-white text-sm font-medium leading-snug line-clamp-3 group-hover:text-[#ee8e0a] transition-colors duration-300">
+                  <p className="text-white text-sm font-medium leading-snug line-clamp-3 group-hover:text-[#ff751f] transition-colors duration-300">
                     {article.titulo}
                   </p>
                 </div>

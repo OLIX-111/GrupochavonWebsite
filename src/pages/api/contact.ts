@@ -72,7 +72,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const safeTelefono = escapeHtml(telefono)
   const safeInteres = escapeHtml(interes)
 
-  const brandColor = '#ee8e0a'
+  const brandColor = '#ff751f'
   const html = `
   <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="background:#f5f6f8;padding:32px 0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
     <tr>

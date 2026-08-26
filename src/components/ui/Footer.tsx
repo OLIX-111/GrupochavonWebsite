@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
           <div className="">
             <Image
-              src="/grupo_chavon_logo.png"
+              src="/Logo de grupochavon modificado.png"
               alt="Logo Grupo Chavón"
               width={150}
               height={50}
@@ -38,7 +38,7 @@ export default function Footer() {
           <div>
             <h3 className="text-sm uppercase tracking-widest mb-6">Empresas</h3>
             <ul className="space-y-3">
-              <li><Link href="/empresas/dyaccsa" target="_blank" className="">Dyaccsa</Link></li>
+              <li><Link href="https://odoo.grupochavon.com/" target="_blank" className="">Tretton</Link></li>
               <li><Link href="https://lromanarealestate.com/" target="_blank" className="">L&rsquo;ROMAna Real State</Link></li>
               <li><Link href="https://www.romanaebanisteria.com/" target="_blank" className="">Romana Ebanisteria</Link></li>
               <li><Link href="/empresas/responsabilidad-social" className="">Fundacion Chavon</Link></li>
@@ -50,9 +50,10 @@ export default function Footer() {
           <div>
             <h3 className="text-sm uppercase tracking-widest mb-6">Proyectos</h3>
             <ul className="space-y-3">
-              <li><Link href="https://lromanarealestate.com/costamar" className="">Costa Mar</Link></li>
+              <li><Link href="https://lromanarealestate.com/frailejonvillage" className="">Frailejón Village</Link></li>
+              <li><Link href="/altos-de-frailejon" className="">Altos de Frailejón</Link></li>
               <li><Link href="https://lromanarealestate.com/stone-tower-3" className="">Stone Tower 3</Link></li>
-              <li><Link href="https://lromanarealestate.com/frailejonvillage" className="">Frailejon Village</Link></li>
+              <li><Link href="https://lromanarealestate.com/costamar" className="">Costa Mar</Link></li>
             </ul>
           </div>
           </div>
