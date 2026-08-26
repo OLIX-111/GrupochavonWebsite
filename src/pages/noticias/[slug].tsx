@@ -213,8 +213,12 @@ export default function NoticiaPage({ noticia }: NoticiaPageProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const slugs: { slug: string }[] = await client.fetch(pathsQuery)
-	return { paths: slugs.map(s => ({ params: { slug: s.slug } })), fallback: 'blocking' }
+	try {
+		const slugs: { slug: string }[] = await client.fetch(pathsQuery)
+		return { paths: slugs.map(s => ({ params: { slug: s.slug } })), fallback: 'blocking' }
+	} catch {
+		return { paths: [], fallback: 'blocking' }
+	}
 }
 
 export const getStaticProps: GetStaticProps<NoticiaPageProps> = async ({ params }) => {

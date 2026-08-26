@@ -178,10 +178,11 @@ export default function EmpresaPage({ empresa }: EmpresaPageProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const slugs: { slug: string }[] = await client.fetch(pathsQuery)
-	return {
-		paths: slugs.map((s) => ({ params: { slug: s.slug } })),
-		fallback: 'blocking',
+	try {
+		const slugs: { slug: string }[] = await client.fetch(pathsQuery)
+		return { paths: slugs.map((s) => ({ params: { slug: s.slug } })), fallback: 'blocking' }
+	} catch {
+		return { paths: [], fallback: 'blocking' }
 	}
 }
 

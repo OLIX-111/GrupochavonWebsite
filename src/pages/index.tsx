@@ -26,7 +26,7 @@ interface HomeProps {
   initialNoticias: any[]
 }
 
-const noticiasQuery = `*[_type=="noticia" && publicado==true]|order(coalesce(orden,999) asc,_createdAt desc)[0...3]{
+const noticiasQuery = `*[_type=="noticia" && publicado==true]|order(coalesce(orden,999) asc,_createdAt desc)[0...6]{
   _id,titulo,slug,imagenPrincipal{asset,alt},_createdAt
 }`
 
