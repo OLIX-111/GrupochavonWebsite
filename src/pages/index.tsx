@@ -9,8 +9,6 @@ import ValuesSection from '@/components/home/Valoreshome'
 import Footer from '@/components/ui/Footer'
 import Header from '@/components/ui/Header'
 import { Geist, Geist_Mono } from 'next/font/google'
-import { GetStaticProps } from 'next'
-import { client } from '@/sanity/lib/client'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,15 +20,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-interface HomeProps {
-  initialNoticias: any[]
-}
-
-const noticiasQuery = `*[_type=="noticia" && publicado==true]|order(coalesce(orden,999) asc,_createdAt desc)[0...6]{
-  _id,titulo,slug,imagenPrincipal{asset,alt},_createdAt
-}`
-
-export default function Home({ initialNoticias }: HomeProps) {
+export default function Home() {
   return (
     <main className="">
       <Header transparent/>
@@ -41,17 +31,8 @@ export default function Home({ initialNoticias }: HomeProps) {
       <HeritageSection/>
       <TeamSection/>
       <SectorsSection/>
-      <NewsSection initial={initialNoticias} />
+      <NewsSection />
       <Footer/>
     </main>
   );
-}
-
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  try {
-    const initialNoticias = await client.fetch(noticiasQuery)
-    return { props: { initialNoticias }, revalidate: 300 }
-  } catch {
-    return { props: { initialNoticias: [] }, revalidate: 120 }
-  }
 }
