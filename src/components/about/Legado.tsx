@@ -32,8 +32,8 @@ export default function ProjectsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative order-2 lg:order-1">
             <Image
-              src="/about/legado2.avif"
-              alt="Trabajador de construcción en obra"
+              src="/personas%20trabajando.png"
+              alt="Personas trabajando en Grupo Chavón"
               width={600}
               height={400}
               className="rounded-sm w-full h-auto"
@@ -41,8 +41,7 @@ export default function ProjectsSection() {
           </div>
           <div className="space-y-6 order-1 lg:order-2">
             <h2 className="text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight">
-              Un Legado De Excelencia Y <br className="hidden lg:block" />
-              Progreso En La Romana
+              Al Trabajador
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
               Con más de 40 años de experiencia, Grupo Chavón ha sido un pilar fundamental en la transformación de La
