@@ -34,8 +34,7 @@ const NEWS: NewsArticle[] = [
     _id: 'odoo-7',
     titulo: 'Grupo Chavón fortalece su visión en el Mercado Construction & Real Estate Summit 2025',
     externalUrl: 'https://grupo-chavon2.odoo.com/en/blog/costamar-open-waouse-3/grupo-chavon-fortalece-su-vision-en-el-mercado-construction-real-estate-summit-2025-2',
-    externalImage: '/imagen%20mejorada.png',
-    contain: true,
+    externalImage: '/imagen%20de%20chicas%20mejorada.png',
   },
   {
     _id: 'odoo-3',
