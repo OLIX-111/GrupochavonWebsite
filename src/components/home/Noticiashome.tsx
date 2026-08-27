@@ -7,6 +7,7 @@ interface NewsArticle {
   externalImage: string
   brighten?: boolean
   objectPosition?: string
+  contain?: boolean
 }
 
 const NEWS: NewsArticle[] = [
@@ -35,7 +36,7 @@ const NEWS: NewsArticle[] = [
     externalUrl: 'https://grupo-chavon2.odoo.com/en/blog/costamar-open-waouse-3/grupo-chavon-fortalece-su-vision-en-el-mercado-construction-real-estate-summit-2025-2',
     externalImage: 'https://grupo-chavon2.odoo.com/web/image/20643-bed03e52/Publicaci%C3%B3n%20de%20blog%20%27Grupo%20Chav%C3%B3n%20fortalece%20su%20visi%C3%B3n%20en%20el%20Mercado%20Construction%20%26%20Real%20Estate%20Summit%202025%27%20cover%20image.webp',
     brighten: true,
-    objectPosition: 'center 30%',
+    contain: true,
   },
   {
     _id: 'odoo-3',
@@ -94,7 +95,7 @@ export default function NewsSection({ limit = 6 }: Props) {
                 alt={article.titulo}
                 fill
                 sizes="(max-width:640px) 50vw, (max-width:1024px) 33vw, 16vw"
-                className={`object-cover transition-transform duration-500 group-hover:scale-105${article.brighten ? ' brightness-110' : ''}`}
+                className={`${article.contain ? 'object-contain' : 'object-cover'} transition-transform duration-500 group-hover:scale-105${article.brighten ? ' brightness-110' : ''}`}
                 style={{ ...(article.brighten ? { filter: 'brightness(1.6) saturate(1.1)' } : {}), objectPosition: article.objectPosition ?? 'center' }}
               />
               {!article.brighten && (
